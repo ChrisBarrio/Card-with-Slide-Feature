@@ -1,0 +1,125 @@
+$body-color: #b3aeae;
+$color-white:#f2f2f2;
+$color-cyan:#3ec1e2;
+$color-black:#202020;
+$color-yellow:#e7e70de8;
+$color-grey:#a5a4a4;
+
+@import "./footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-color: $body-color;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section .card {
+    
+    background: $color-white;
+    border-radius: 20px;
+    margin: 20px 0;
+    position: relative;
+    
+    &:before{
+        content:"";
+        position: absolute;
+        height:45%;
+        width: 100%;
+        background: $color-cyan;
+        border-radius: 20px 20px 0 0;
+    }
+    
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+            
+        }
+        
+        .image{
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            padding: 3px;
+            background: $color-black;
+        }
+        
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid $color-black; 
+        }
+        .media-icons{
+            padding: 10px 0 10px 0;
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            i{
+                opacity: 0.6;
+                margin-top: 10px;
+                transition: all 0.3s ease;
+                cursor: pointer; 
+                
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .name-player{
+            padding: 10px 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $color-black;
+
+            .name{
+                font-size: 20px;
+                font-weight: 600;
+                padding: 0 0 5px 0;
+            }
+            .position{
+                font-size: 15px;
+            }
+        }
+
+        .rating{
+            color: $color-yellow;
+        }
+
+        .btn-card{
+            margin: 15px 0 0 0;
+            padding: 5px 10px 5px 10px;
+            background: $color-grey;
+            border-radius: 5px;
+            a{
+                text-decoration: none;
+                color: $color-black;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    
+    
+    
+    
+    
