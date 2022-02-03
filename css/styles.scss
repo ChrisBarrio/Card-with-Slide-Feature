@@ -1,8 +1,8 @@
 $body-color: #b3aeae;
 $color-white:#f2f2f2;
 $color-cyan:#3ec1e2;
-$color-black:#202020;
-$color-yellow:#e7e70de8;
+$color-black:rgb(32, 32, 32);
+$color-yellow:#F9B208;
 $color-grey:#a5a4a4;
 
 @import "./footer";
@@ -15,21 +15,55 @@ $color-grey:#a5a4a4;
 }
 
 body{
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-color: $body-color;
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100vh;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    &::before{
+        content: "";
+        background-image: url(../img/Copa-America-Brasil-2019.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.6;
+        z-index: -9;
+    }
+}
+header{
+    display: grid;
+    justify-content: center;
+    background-color: rgba(87, 82, 82, 0.2);
+    
+    h1{
+        font-size: 2.5rem;
+        font-family: 'Lobster', cursive;
+    }
+}
+
+.swiper{
+    width: 59.375rem;
 }
 
 
 section .card {
     
     background: $color-white;
-    border-radius: 20px;
-    margin: 20px 0;
+    border-radius: 1.25rem;
+    margin: 1.25rem 0;
     position: relative;
+    border: 1px solid $color-black;
+    width: 13.75rem;
     
     &:before{
         content:"";
@@ -37,24 +71,24 @@ section .card {
         height:45%;
         width: 100%;
         background: $color-cyan;
-        border-radius: 20px 20px 0 0;
+        border-radius: 1.25rem 1.25rem 0 0;
     }
     
-        .card-content{
+    .card-content{
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 30px;
+            padding: 1.875rem;
             position: relative;
             z-index: 1;
             
         }
         
         .image{
-            height: 140px;
-            width: 140px;
+            height: 8.75rem;
+            width: 8.75rem;
             border-radius: 50%;
-            padding: 3px;
+            padding: 0.1875rem;
             background: $color-black;
         }
         
@@ -65,61 +99,70 @@ section .card {
             border-radius: 50%;
             border: 1px solid $color-black; 
         }
+
         .media-icons{
             padding: 10px 0 10px 0;
             position: absolute;
-            top: -5px;
-            right: 10px;
+            top: -0.3125rem;
+            right: 0.625rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             
-            i{
+            a{
                 opacity: 0.6;
-                margin-top: 10px;
+                margin-top: 0.3125rem;
                 transition: all 0.3s ease;
                 cursor: pointer; 
-                
+                color:$color-black;
                 &:hover{
                     opacity: 1;
                 }
             }
         }
+
         .name-player{
-            padding: 10px 0 10px 0;
+            padding: 0.625rem 0 0.625rem 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             color: $color-black;
 
             .name{
-                font-size: 20px;
+                font-size: 1.25rem;
                 font-weight: 600;
-                padding: 0 0 5px 0;
+                font-family: 'Nunito Sans', sans-serif;
+                padding: 0 0 0.3125rem 0;
             }
+
             .position{
-                font-size: 15px;
+                font-size: 0.9375rem;
             }
         }
-
-        .rating{
+        
+        .rating {
             color: $color-yellow;
+            } 
+                   
         }
 
         .btn-card{
             margin: 15px 0 0 0;
-            padding: 5px 10px 5px 10px;
+            padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
             background: $color-grey;
-            border-radius: 5px;
+            border-radius: 0.3125rem;
+            &:hover{
+                background-color: $body-color;
+
+            }
             a{
                 text-decoration: none;
                 color: $color-black;
-                letter-spacing: 2px;
+                letter-spacing: 0.125rem;
             }
         }
-    }
-    
-    
+
+        
     
     
     

@@ -1,9 +1,24 @@
 footer {
-  background-color: yellowgreen;
+  background-color: #202020;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
 }
 
-footer p {
-  color: blue;
+footer i {
+  color: #a5a4a4;
+  padding: 0 10px 0 10px;
+}
+
+footer i:hover {
+  color: lightsteelblue;
 }
 
 * {
@@ -15,25 +30,62 @@ footer p {
 }
 
 body {
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-color: #b3aeae;
   font-family: Georgia, 'Times New Roman', Times, serif;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  background-image: url(../img/Copa-America-Brasil-2019.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+  z-index: -9;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(87, 82, 82, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: 'Lobster', cursive;
+}
+
+.swiper {
+  width: 59.375rem;
 }
 
 section .card {
   background: #f2f2f2;
-  border-radius: 20px;
-  margin: 20px 0;
+  border-radius: 1.25rem;
+  margin: 1.25rem 0;
   position: relative;
+  border: 1px solid #202020;
+  width: 13.75rem;
 }
 
 section .card:before {
@@ -42,7 +94,7 @@ section .card:before {
   height: 45%;
   width: 100%;
   background: #3ec1e2;
-  border-radius: 20px 20px 0 0;
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 
 section .card .card-content {
@@ -56,16 +108,16 @@ section .card .card-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px;
+  padding: 1.875rem;
   position: relative;
   z-index: 1;
 }
 
 section .card .image {
-  height: 140px;
-  width: 140px;
+  height: 8.75rem;
+  width: 8.75rem;
   border-radius: 50%;
-  padding: 3px;
+  padding: 0.1875rem;
   background: #202020;
 }
 
@@ -81,8 +133,8 @@ section .card img {
 section .card .media-icons {
   padding: 10px 0 10px 0;
   position: absolute;
-  top: -5px;
-  right: 10px;
+  top: -0.3125rem;
+  right: 0.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,20 +147,21 @@ section .card .media-icons {
           align-items: center;
 }
 
-section .card .media-icons i {
+section .card .media-icons a {
   opacity: 0.6;
-  margin-top: 10px;
+  margin-top: 0.3125rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
+  color: #202020;
 }
 
-section .card .media-icons i:hover {
+section .card .media-icons a:hover {
   opacity: 1;
 }
 
 section .card .name-player {
-  padding: 10px 0 10px 0;
+  padding: 0.625rem 0 0.625rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,28 +176,33 @@ section .card .name-player {
 }
 
 section .card .name-player .name {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
-  padding: 0 0 5px 0;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 0 0 0.3125rem 0;
 }
 
 section .card .name-player .position {
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 section .card .rating {
-  color: #e7e70de8;
+  color: #F9B208;
 }
 
-section .card .btn-card {
+.btn-card {
   margin: 15px 0 0 0;
-  padding: 5px 10px 5px 10px;
+  padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
   background: #a5a4a4;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
-section .card .btn-card a {
+.btn-card:hover {
+  background-color: #b3aeae;
+}
+
+.btn-card a {
   text-decoration: none;
   color: #202020;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }

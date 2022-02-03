@@ -1,8 +1,17 @@
 
 
 footer{
-    background-color: yellowgreen;
-    p{
-        color: blue;
+    background-color: $color-black;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    i{
+        color: $color-grey;
+        padding: 0 10px 0 10px;
+        &:hover{
+            color: lightsteelblue;
+        }
     }
 }
