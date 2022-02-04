@@ -85,7 +85,8 @@ section .card {
   margin: 1.25rem 0;
   position: relative;
   border: 1px solid #202020;
-  width: 13.75rem;
+  width: 300px;
+  height: 400px;
 }
 
 section .card:before {
@@ -108,7 +109,7 @@ section .card .card-content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.875rem;
+  padding: 3.4375rem 0 0 0;
   position: relative;
   z-index: 1;
 }
